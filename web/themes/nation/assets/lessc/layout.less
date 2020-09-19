@@ -1,0 +1,238 @@
+/*
+============================================
+This is general overlay effect
+============================================
+*/
+.image-wrapper {
+  position: relative;
+  height: inherit;
+  overflow: hidden;
+  .dexp-image {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    .transition(all, 0.3s);
+    opacity:0;
+    .overlay-inner {
+      .middle-center-wrapper();
+      text-align: center;
+      width: 100%;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  /* Hover effect */
+  &:hover {
+    .overlay {
+      opacity:1;
+    }
+  }
+}
+
+/*
+========================
+Portfolio layout style 01
+========================
+*/
+
+.dexp-layout-portfolio-style01 {
+  height: inherit;
+  .image-wrapper {
+    position: relative;
+    height: inherit;
+    overflow: hidden;
+    .dexp-image {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .overlay {
+      background-color: rgba(11, 11, 11, .9);
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      .transition(all, 0.3s);
+      .scale(0);
+      .overlay-inner {
+        .middle-center-wrapper();
+        text-align: center;
+        width: 100%;
+        padding: 20px 40px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: @base_color;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .field--name-node-title {
+          a {
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: .1em;
+            margin-bottom: 0;
+            outline: 0;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+        .field--name-field-portfolio-categories {
+          a {
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 0;
+            padding-top: 0;
+            color: #b2b2b2;
+            font-weight: 500;
+            &:hover {
+              color: @link_hover_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Hover effect */
+  &:hover {
+    .overlay {
+      .scale(1);
+    }
+  }
+}
+
+/*
+==========================
+Portfolio layout style 02
+==========================
+*/
+
+.dexp-layout-portfolio-style02 {
+  height: inherit;
+  .image-wrapper {
+    position: relative;
+    height: inherit;
+    overflow: hidden;
+    .dexp-image {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .overlay {
+      background-color: rgba(11, 11, 11, .9);
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 100%;
+      z-index: 1;
+      .transition(all, 0.3s);
+      .overlay-inner {
+        .middle-center-wrapper();
+        text-align: center;
+        width: 100%;
+        padding: 20px 10px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: @base_color;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .field--name-node-title {
+          a {
+            color: #fff;
+            letter-spacing: .1em;
+            margin-bottom: 0;
+            outline: 0;
+            font-weight: 300;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+        .field--name-field-team-position{
+          @media (max-width: @screen-sm-max){
+            margin-bottom: 15px;
+          }
+        }
+        .field--name-field-portfolio-categories {
+          a {
+            font-style: italic;
+            color: #b2b2b2;
+            &:hover {
+              color: @link_hover_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Hover effect */
+  &:hover {
+    .overlay {
+      top: 0;
+    }
+  }
+}
+
+.portfolio-type {
+  .field--name-field-type {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    bottom: 40px;
+    right: 045px;
+    text-align: center;
+    background: #fff;
+    color: #0b0b0b;
+    line-height: 45px;
+    position: absolute;
+  }
+}
+
+.portfolio-layout-bottom {
+  background: #fafafa;
+  padding: 20px 30px;
+  .field--name-node-title {
+    letter-spacing: .1em;
+    margin-bottom: 0;
+    p{
+      line-height: 1.2;
+    }
+  }
+  .field--name-field-portfolio-categories {
+    font-style: italic;
+    color: #999 !important;
+  }
+}

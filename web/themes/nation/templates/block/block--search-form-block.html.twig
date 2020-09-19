@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'block',
+    'block-search',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+		<span class="fa fa-search search-toggle"></span>
+    <div class="search-form-block-wrapper">
+        <div class="container-fluid">
+            <div class="col-12 search-form-block-content">
+                <div class="container-inline">
+                    {% block content %}
+                        {{ content }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

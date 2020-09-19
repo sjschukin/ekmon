@@ -1,0 +1,30 @@
+{% set classes = [
+  'blog-item'
+] %}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if top %}
+    <div {{ top_attributes.addClass('dexp-top') }} >{{ top }}</div>
+  {% endif %}
+  <div  class="image-wrapper">
+    {% if image %}
+      <div {{ image_attributes.addClass('dexp-image') }} >{{ image }}</div>
+    {% endif %}
+    {% if overlay %}
+      <div {{ overlay_attributes.addClass('overlay') }} >
+        <div class="overlay-inner">
+          {{ overlay }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  {% if dexp_content %}
+    <div  {{ dexp_content_attributes.addClass('dexp-content') }} >{{ dexp_content }}</div>
+  {% endif %}
+
+  {% if bottom %}
+    <div {{ bottom_attributes.addClass('dexp-bottom') }} >
+      {{ bottom }}
+    </div>
+  {% endif %}
+</div>

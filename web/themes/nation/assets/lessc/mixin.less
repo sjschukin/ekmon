@@ -1,0 +1,101 @@
+.translate(@x: 0px, @y: 0px) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+.translateX(@x: 0px) {
+  -webkit-transform: translateX(@x);
+  -moz-transform: translateX(@x);
+  -ms-transform: translateX(@x);
+  -o-transform: translateX(@x);
+  transform: translateX(@x);
+}
+.translateY(@y: 0px) {
+  -webkit-transform: translateY(@y);
+  -moz-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  -o-transform: translateY(@y);
+  transform: translateY(@y);
+}
+/* BACKGROUND GRADIENT */
+
+.background-gradient-top-right(@startColor: #3C3C3C, @midColor: #3C3C3C, @endColor: #999999) {
+  background-color: @startColor;
+  background: -webkit-gradient(top right, from(@startColor), @midColor, to(@endColor));
+  background: -webkit-linear-gradient(top right, @startColor, @midColor, @endColor);
+  background: -moz-linear-gradient(top right, @startColor, @midColor, @endColor);
+  background: -ms-linear-gradient(top right, @startColor, @midColor, @endColor);
+  background: -o-linear-gradient(top right, @startColor, @midColor, @endColor);
+  background: linear-gradient(to top right, @startColor, @midColor, @endColor);
+  filter : progid:DXImageTransform.Microsoft.gradient(startColorStr='#{@startColor}', endColorStr='#{@endColor}');
+}
+
+.background-gradient-right-bottom(@startColor: #3C3C3C, @midColor: #3C3C3C, @endColor: #999999) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(right bottom, from(@startColor), @midColor, to(@endColor));
+  background-image: -webkit-linear-gradient(right bottom, @startColor, @midColor, @endColor);
+  background-image: -moz-linear-gradient(right bottom, @startColor, @midColor, @endColor);
+  background-image: -ms-linear-gradient(right bottom, @startColor, @midColor, @endColor);
+  background-image: -o-linear-gradient(right bottom, @startColor, @midColor, @endColor);
+  background-image: linear-gradient(to right bottom, @startColor, @midColor, @endColor);
+  filter : progid:DXImageTransform.Microsoft.gradient(startColorStr='#{@startColor}', endColorStr='#{@endColor}');
+}
+
+/**/
+
+.filter(@x) {
+  -webkit-filter: grayscale(@x);
+  -moz-filter: grayscale(@x);
+  -o-filter: grayscale(@x);
+  -ms-filter: grayscale(@x);
+  filter: grayscale(@x);
+}
+.transform-rotateX(@deg) {
+  -webkit-transform: rotateX(@deg);
+  -moz-transform: rotateX(@deg);
+  -o-transform: rotateX(@deg);
+  -ms-transform: rotateX(@deg);
+  transform: rotateX(@deg);
+}
+.transform-rotateY(@deg) {
+  -webkit-transform: rotateY(@deg);
+  -moz-transform: rotateY(@deg);
+  -o-transform: rotateY(@deg);
+  -ms-transform: rotateY(@deg);
+  transform: rotateY();
+}
+
+.input-placeholder(@color) {
+  ::-webkit-input-placeholder {
+    color: @color;
+  }
+  ::-moz-placeholder {
+    color: @color;
+  }
+  :-ms-input-placeholder {
+    color: @color;
+  }
+  input:-moz-placeholder {
+    color: @color;
+  }
+}
+
+/*input type no number*/
+
+.appearance {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -o-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
+}
+
+.transition-delay(@time) {
+  -webkit-transition-delay: @time;
+  -moz-transition-delay: @time;
+  -o-transition-delay: @time;
+  -ms-transition-delay: @time;
+  transition-delay: @time;
+}

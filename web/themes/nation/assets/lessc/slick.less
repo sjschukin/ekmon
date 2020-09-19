@@ -1,0 +1,59 @@
+.dexp-slick-carousel{
+  .slick-controls{
+    button.slick-arrow{
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      .transition(all,0.3s);
+      &[aria-disabled=true]{
+        opacity: 0.2;
+      }
+      &:focus{
+        outline: none;
+      }
+      &:before{
+        .transition(all,0.3s);
+        font-family: FontAweSome;
+        font-size: 20px;
+        line-height: 40px;
+        color: #fff;
+        line-height: 36px;
+      }
+      &.slick-prev{
+        &::before{
+          content: "\f104";
+        }
+      }
+      &.slick-next{
+        &::before{
+          content: "\f105";
+        }
+      }
+    }
+  }
+  &.arrows-center-bottom{
+    .slick-controls{
+      margin-top: 30px;
+      .slick-arrow{
+        margin: 0 15px;
+      }
+      .modern-control &{
+        margin-top: -29px;
+        z-index: 99;
+        .slick-arrow{
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}
+/*Single product*/
+.path-product .product-single .slick-list {
+  overflow: hidden;
+  .slick-track {
+    position: absolute;
+  }
+}

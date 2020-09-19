@@ -1,0 +1,19 @@
+.dexp-body-inner{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+}
+.dexp-sticky.affix{
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top:0;
+}
+.dexp-sticky{
+  /*
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  */
+}

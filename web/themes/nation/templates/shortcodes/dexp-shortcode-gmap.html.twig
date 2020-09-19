@@ -1,0 +1,6 @@
+{% set classes = [
+  'dexp-gmap-shortcode'
+]
+%}
+{{ attach_library('dexp_shortcodes/gmap') }}
+<div {{ attributes.addClass(classes) }} style="height:{{ height }}" data-type="{{ type }}" data-zoom="{{ zoom }}">{{ text }}</div>

@@ -1,0 +1,27 @@
+{% set classes = [
+  'blog-item', 'blog-list'
+] %}
+<div {{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  <div class="row">
+    <div class="col-md-5">
+      <div  class="image-wrapper">
+        {% if image %}
+          <div {{ image_attributes.addClass('dexp-image') }} >{{ image }}</div>
+        {% endif %}
+        {% if overlay %}
+          <div {{ overlay_attributes.addClass('overlay') }} >
+            <div class="overlay-inner">
+              {{ overlay }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-7">
+    {% if right %}
+      <div {{ right_attributes.addClass('dexp-right') }} >{{ right }}</div>
+    {% endif %}
+    </div>
+  </div>
+</div>

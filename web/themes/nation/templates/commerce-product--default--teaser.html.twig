@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ * {{- product|without('variation_attributes')|without('variation_sku')|without('title') -}}
+ * title variations variation_title variation_attributes variation_field_product_image variation_price variation_sku
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes.addClass('product-item') }}>
+    <div class="entry">
+        {{  product.variation_field_product_image }}
+        <div class="magnifier">
+            <div class="inner text-center">
+                <h3><a href="{{ product_url }}">{{ product.title }}</a></h3>
+                <div class="prod-price">{{ product.variation_price }}</div>
+                <div class="short-desc">{{ product.body }}</div>
+                <div class="prod-buttons">
+                    {{- product.variations -}}
+                    <span>
+                        <a class="btn-addcart" data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Add to Cart" href="#" data-original-title="" title="">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="{{ product_url }}" data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="{% trans 'View Details' %}" data-original-title="" title="">
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>    
+        </div>    
+    </div>    
+</article>

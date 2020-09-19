@@ -1,0 +1,9 @@
+{% if content %}
+  <div{{ attributes }}>
+    <div class="section-inner">
+      <div{{ attributes_container.addClass(container_class) }}>
+        <div{{ attributes_row.addClass('row') }}>{{ content }}</div>
+      </div>
+    </div>
+  </div>
+{% endif %}

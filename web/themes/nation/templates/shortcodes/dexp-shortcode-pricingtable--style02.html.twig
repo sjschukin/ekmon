@@ -1,0 +1,22 @@
+<div class="pricing-box {% if featured %} featured {% endif %}{% if class %}{{class}}{% endif %}">
+<div class="pricing-heading">
+{%if icon|length > 0 %}
+<div class="icon">
+{{icon|raw}}
+</div>
+{%endif%}
+<div class="title">
+<h3>{{title}}</h3>
+</div>
+<div class="price">
+<h2>{%if currency %}{{currency}}{%endif%}{%if price %}{{price}}{%endif%}{%if period %}/{{period}}{%endif%}</h2>
+</div>
+</div>
+<!-- end heading -->
+
+<div class="pricing-details">
+{{content|raw}}
+</div>
+<!-- end pricing-details -->
+<div class="button-wrapper"><a class="dexp-button btn btn-primary icon-left btn-center btn-lg" href="{{link}}">{{link_text}}</a></div>
+</div>

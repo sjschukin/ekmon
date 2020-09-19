@@ -1,0 +1,103 @@
+name: Nation
+type: theme
+description: The Nation - MultiPurpose Drupal Theme
+base theme: drupalexp
+core: 8.x
+version: 8.x-1.0
+regions:
+  logo: Logo
+  navigation: Navigation
+  slider: Slider
+  content: Content
+  bottom_content: Bottom content first
+  bottom_content_second: Bottom content second
+  top_content: Top content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  bottom_first: Bottom first
+  bottom_second: Bottom second
+  bottom_third: Bottom third
+  bottom_fourth: Bottom fourth
+  copyright: CopyRight
+  block_left: Block Left
+  block_right: Block Right
+  breadcrum: Breadcrumb
+  page_title: Page Title
+  search: Search
+  # REGIONS for Onge Page Layout
+  user_01: User 01
+  user_02: User 02
+  user_03: User 03
+  user_04: User 04
+  user_05: User 05
+  user_06: User 06
+  user_07: User 07
+  
+libraries:
+  - nation/base
+  - nation/et-line
+
+presets:
+  Light:
+    background_color:
+      title: Background Color
+      value: '#ffffff'
+    base_color:
+      title: Base Color
+      value: '#303030'
+    text_color:
+      title: Text Color
+      value: '#666666'
+    link_color:
+      title: Link Color
+      value: '#e1571a'
+    link_hover_color:
+      title: Link Hover Color
+      value: '#e1571a'
+    heading_color:
+      title: Heading Color
+      value: '#141414'
+  Dark:
+    background_color:
+      title: Background Color
+      value: '#0b0b0b'
+    base_color:
+      title: Base Color
+      value: '#303030'
+    text_color:
+      title: Text Color
+      value: '#999999'
+    link_color:
+      title: Link Color
+      value: '#ffffff'
+    link_hover_color:
+      title: Link Hover Color
+      value: '#494c50'
+    heading_color:
+      title: Heading Color
+      value: '#ffffff'
+lessc:
+  - assets/lessc/slider.less
+  - assets/lessc/style.less
+  - assets/lessc/blog.less
+  - assets/lessc/portfolio.less
+  - assets/lessc/form.less
+  - assets/lessc/header.less
+  - assets/lessc/shortcodes.less
+  - assets/lessc/menu.less
+  - assets/lessc/search.less
+  - assets/lessc/common.less
+  - assets/lessc/layout.less
+  - assets/lessc/team.less
+  - assets/lessc/pages.less
+  - assets/lessc/block-custom-type.less  
+  - assets/lessc/footer.less
+  - assets/lessc/style-rtl.less
+  - assets/lessc/builder-elements.less
+  - assets/lessc/shop.less
+  - assets/lessc/slick.less
+  - assets/lessc/style-dark.less
+  - assets/lessc/quicksettings.less
+  - assets/lessc/mixin.less
+stylesheets-remove:
+  - '@classy/css/components/menu.css'

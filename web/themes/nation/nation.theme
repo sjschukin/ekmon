@@ -1,0 +1,76 @@
+<?php
+use Drupal\drupalexp\DrupalExp;
+/**
+ * Implement hook_form_search_block_form_alter().
+ */
+function nation_form_search_block_form_alter(&$form) {
+  $form['keys']['#attributes']['placeholder'] = t('What are you looking for?');
+  $form['actions']['#attributes']['class'][] = 'visually-hidden';
+}
+
+function nation_preprocess_region(&$variables){
+  $drupalexp = DrupalExp::get();
+  $region_key = $variables['region'];
+  if('search' == $region_key){
+    if(!empty($variables['elements'])){
+      $css = "#section-header .search-toggle-icon { display: block!important}";
+      $variables['#attached']['html_head'][] = [
+        [
+          '#tag' => 'style',
+          '#value' => $css,
+        ],
+        'search-icon-css'
+      ];
+    }
+  }
+  if('navigation' == $region_key){
+    $variables['search_toggle'] = '<span class="nation-icon-search search-toggle-icon"></span>';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() to set 40x template suggestions
+ */
+function nation_theme_suggestions_page_alter(&$suggestions, $variables, $hook) {
+  /**
+   * 404 template suggestion.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 403:
+      case 404:
+        $suggestions[] = 'page__4xx';
+        $suggestions[] = 'page__' . (string) $status_code;
+        break;
+      default:
+        break;
+    }
+  }
+}
+
+function nation_preprocess_page(&$page){
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 403:
+        $page['attributes']['class'][] = 'page-error-403';
+        $page['status_code'] = $status_code;
+        $page['message'] = t('Access denied');
+        break;
+      case 404: 
+        $page['attributes']['class'][] = 'page-error-404';
+        $page['status_code'] = $status_code;
+        $page['message'] = t('Not found');
+        break;
+      default:
+        break;
+    }
+    $page['home_url'] = \Drupal\Core\Url::fromRoute('<front>')->toString();
+  }
+}
+function nation_form_dexp_quick_settings_alter(&$form, &$form_state){
+  $form['purchase'] = [
+    '#markup' => '<a href="https://www.drupalexp.com/themes/nation" target="_blank" class="dexp-button btn btn btn-primary icon-left btn-center"><i class="nation-icon-cart"></i> Purchase this theme</a>',
+  ];
+}

@@ -1,0 +1,40 @@
+base:
+  css:
+    base:
+      assets/fonts/nation.css: {}
+  js:
+    assets/js/nation.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+et-line:
+  version: 1.0.0
+  css:
+    base:
+      assets/vendor/et-line/style.css: {}
+slick-product:
+  js:
+    assets/js/slick-product.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupalSettings
+nation-slick:
+  css:
+    base:
+      assets/css/slick.css : {}
+  js:
+    assets/js/slick.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+block-cart:
+  js:
+    assets/js/cart.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

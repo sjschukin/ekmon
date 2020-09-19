@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ * {{- product|without('variation_attributes')|without('variation_sku')|without('title') -}}
+ * title variations variation_title variation_attributes variation_field_product_image variation_price variation_sku
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('nation/slick-product') }}
+{{ attach_library('nation/nation-slick') }}
+<article {{ attributes.addClass('product-single') }}>
+    <div class="row">
+        <div class="col-md-5 col-sm-12 mb-4">
+          <div class="images-product">
+             {{  product.variation_field_product_image }}
+          </div>
+          <div class="product-images-slider">
+             {{  product.variation_field_product_image }}
+          </div>
+        </div>
+        <div class="single_product_details col-md-7 col-sm-12">
+            <div class="product-title">{{ product.title }}</div>
+            <div class="product-rating">{{ product.field_product_rating }}</div>
+            <div class="product-price">{{ product.variation_price }}</div>
+			<div class="product-body">{{ product.body }}</div>
+            <div class="product-buttons"> {{ product.variations }}
+              <div class="btn-group">
+                <a class="btn btn-default wishlist" data-rel="tooltip" href="#" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="" data-original-title="{% trans 'Add to Wishlist' %}" title=""><i class="fa fa-heart-o"></i></a>
+                <a class="button btn-addtocart js-form-submit form-submit btn btn-primary" data-rel="tooltip" href="#" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="" data-original-title="{% trans 'Add to Cart' %}" title="">{% trans 'ADD TO CART' %}</a>
+                <a class="btn btn-default zoom"  data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="" data-original-title="{% trans 'View Large' %}" title="" ><i class="fa fa-search"></i></a>
+              </div>
+            </div>
+            <div class="product-category"> {{ product.field_product_category }}</div>
+        </div>
+    </div>
+	<div id="product-single-tabs" class="dexp-builder-tabs clearfix"> 
+		<ul class="nav nav-tabs" role="tablist">
+		  <li class="nav-item">
+			<a class="nav-link active" href="#product-description" role="tab" data-toggle="tab">{% trans 'Description' %}</a>
+		  </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#product-specification" role="tab" data-toggle="tab">{% trans 'Specification'%}</a>
+          </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#product-reviews" role="tab" data-toggle="tab">{% trans 'Reviews'%}</a>
+		  </li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade show active" id="product-description">{{ product.field_product_description }}</div>
+		  <div role="tabpanel" class="tab-pane fade" id="product-specification">{{ product.field_product_specification }}</div>
+		  <div role="tabpanel" class="tab-pane fade" id="product-reviews">{{ product.field_product_comment}}</div>
+		</div>
+	</div>
+
+</article>

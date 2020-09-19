@@ -1,0 +1,140 @@
+portfolio_layout_style1:
+  label: Portflio layout style 1
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/portfolio-layout-style01
+  icon: assets/images/portfolio-style1.png
+  regions:
+    top:
+      label: Top
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+    dexp_content:
+      label: Content
+    bottom:
+      label: Bottom
+portfolio_layout_style2:
+  label: Portflio layout style 2
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/portfolio-layout-style02
+  icon: assets/images/portfolio-style2.png
+  regions:
+    top:
+      label: Top
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+    dexp_content:
+      label: Content
+    portfolio_type:
+      label: Icon
+    bottom:
+      label: Bottom
+portfolio_layout_style3:
+  label: Portflio layout style 3
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/portfolio-layout-style03
+  icon: assets/images/portfolio-style3.png
+  regions:
+    top:
+      label: Top
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+    dexp_content:
+      label: Content
+    portfolio_type:
+      label: Icon
+    bottom:
+      label: Bottom
+blog_layout_teaser:
+  label: Blog layout Teaser Style
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/blog-layout-teaser
+  icon: assets/images/blog-layout-teaser.png
+  regions:
+    top:
+      label: Top
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+    dexp_content:
+      label: Content
+    bottom:
+      label: Bottom
+blog_list_image_left_style:
+  label: Blog List Image Left Style
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/blog-list-image-left-style
+  icon: assets/images/content-teaser.png
+  regions:
+    right:
+      label: Right  
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+blog_layout_single:
+  label: Blog layout Single
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/blog-layout-single
+  icon: assets/images/blog-layout-single.png
+  regions:
+    top:
+      label: Top
+    dexp_content:
+      label: Content
+    bottom:
+      label: Bottom
+blog_layout_dark:
+  label: Blog layout Dark Style
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/blog-layout-dark
+  icon: assets/images/blog-layout-dark.png
+  regions:
+    image:
+      label: Image
+    overlay:
+      label: Overlay  
+    dexp_content:
+      label: Content
+    bottom:
+      label: Bottom
+team_layout:
+  label: Team layout
+  category: Nation Layouts
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: templates/layouts/team-layout
+  icon: assets/images/team-layout.png
+  regions:
+    top:
+      label: Top
+    image:
+      label: Image
+    overlay:
+      label: Overlay
+    dexp_content:
+      label: Content
+    portfolio_type:
+      label: Icon
+    bottom:
+      label: Bottom

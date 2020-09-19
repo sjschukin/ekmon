@@ -1,0 +1,322 @@
+.feature-icon {
+  color: @base_color;
+  font-size: 35px;
+  float: right;
+  background: rgba(0, 0, 0, 0) url("../images/shape2.png") no-repeat scroll left center;
+  height: 35px;
+  position: absolute;
+  width: 170px;
+  text-align: right;
+  &.holder1 {
+    left: 48%;
+    top: 240px;
+  }
+  &.holder2 {
+    left: 48%;
+    top: 400px;
+  }
+  &.holder3 {
+    left: 52%;
+    top: 550px;
+  }
+}
+
+.tooltip {
+  .tooltip-inner {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Dosis;
+  }
+}
+
+.landing-message {
+  .lead {
+    line-height: 2;
+    color: #fff;
+    font-weight: 100 !important;
+    font-family: Lato, sans-serif;
+  }
+}
+
+.wellbox-desc {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  @media @mobile-landscape {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+body:not(.noh-margin) {
+  #section-page-title {
+    @media (min-width: @screen-md) {
+      margin-bottom: 100px;
+    }
+    @media @mobile-landscape {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+/*=============CONTACT FORM============*/
+
+.contact-form {
+  margin-top: 80px;
+  @media (min-width: @screen-md) {
+    padding: 0 100px;
+  }
+  .form-item-name,
+  .form-item-mail,
+  .field--name-subject,
+  .form-type-textarea {
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 12px;
+      margin-top: 0;
+      padding: 8px 10px;
+      border: 1px solid #d9d9d9;
+      background-color: #F7F9FA;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      background: transparent;
+      border: none !important;
+      background-color: transparent !important;
+      border-bottom: solid 1px #8e8e8e !important;
+      .border-radius-all(0px);
+      &:focus {
+        box-shadow: none;
+        border-bottom-color: #000 !important;
+      }
+    }
+  }
+  .form-actions {
+    text-align: center !important;
+    margin-top: 50px;
+    #edit-preview {
+      display: none;
+    }
+  }
+}
+
+.bg-overlay,
+.dexp-parallax {
+  .contact-form {
+    .form-item-name,
+    .form-item-mail,
+    .field--name-subject,
+    .form-type-textarea {
+      input,
+      textarea {
+        background: transparent;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.contact-message-feedback-form {
+  .form-type-textarea {
+    clear: both;
+    textarea {
+      border: solid 1px #d9d9d9;
+      background-color: #F7F9FA;
+    }
+  }
+  .form-item-name {
+    text-align: left;
+  }
+  .form-item-name,
+  .form-item-mail,
+  .field--name-subject {
+    width: 33.3%;
+    float: left;
+    text-align: left;
+    input {
+      width: 90%;
+      height: 35px;
+      margin-bottom: 30px;
+      border: solid 1px #d9d9d9;
+      background-color: #F7F9FA;
+    }
+  }
+  .field--name-subject input {
+    width: 100% !important;
+  }
+  @media @mobile {
+    .form-item-name,
+    .form-item-mail,
+    .field--name-subject {
+      width: 100%;
+      float: left;
+      input {
+        width: 100%;
+        height: 35px;
+      }
+    }
+  }
+  .field--widget-string-textarea textarea {
+    height: 140px;
+  }
+  .form-item-name input,
+  .form-item-mail input,
+  .field--name-subject input,
+  .field--widget-string-textarea textarea {
+    padding: 10px 10px 10px 0;
+    font-size: 12px;
+  }
+  .form-actions {
+    text-align: right;
+  }
+}
+
+.media-icon-onimage {
+  i {
+    color: #fff !important;
+    font-size: 43px;
+  }
+  h2 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.callout {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  @media @mobile-landscape {
+    padding: 20px 10px;
+  }
+}
+
+.notfound h1 {
+  font-family: Cochin;
+  font-size: 200px;
+  color: #fff;
+  line-height: 1;
+  margin-top: 140px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.notfound h2 {
+  padding: 10px 0 30px;
+  margin: 0;
+  color: #0b0b0b;
+  font-size: 72px;
+  font-weight: 700;
+}
+
+body.not-found {
+  #section-content {
+    background-image: url("../images/c1_2.jpg");
+  }
+  .nf-container {
+    h1 {
+      font-family: Cochin;
+      font-size: 200px;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    h2 {
+      padding: 10px 0 30px;
+      margin: 0;
+      color: #0b0b0b;
+      font-size: 72px;
+      font-weight: 700;
+    }
+  }
+}
+
+.check,
+.sitemap-box-menu,
+.sitemap-box-terms {
+  li {
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 4px;
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-size: 16px;
+      left: 0;
+      color: #0b0b0b;
+      padding-right: 5px;
+      position: relative;
+      top: 2px;
+    }
+    a {
+      color: #656565;
+    }
+  }
+}
+
+.node--type-partner {
+  margin-bottom: 0px !important;
+  .image-wrapper {
+    padding: 20px;
+    border: 1px solid #f5f5f5;
+    .dexp-image {
+      img {
+        width: auto !important;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.dexp-section.same-height {
+  .row {
+    display: flex;
+    .block {
+      &.full-height {
+        height: 100%;
+        min-height: 300px;
+      }
+      .bg-inner {
+        background-position: center center !important;
+        background-size: cover !important;
+        height: 100%;
+        right: 0;
+        width: 100%;
+        position: absolute;
+      }
+    }
+    @media @mobile {
+      display: block;
+    }
+  }
+}
+
+.personal_details {
+  &.personal-resume {
+    h3 {
+      margin: 0px 0px 16px;
+    }
+  }
+}
+
+.personal-resume-image {
+  overflow: hidden;
+  img {
+    max-width: unset;
+  }
+}
+
+.page-content-mb50 {
+  #block-nation-content .content {
+    margin-bottom: 100px;
+    @media @mobile-landscape {
+      margin-bottom: 60px;
+    }
+  }
+}

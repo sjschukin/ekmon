@@ -1,0 +1,54 @@
+name: DrupalExp
+type: theme
+description: 'Base theme with Drag and Drop layout builder.'
+'base theme': classy
+core: 8.x
+version: 8.x-1.0
+hidden: true
+stylesheets-remove:
+  - '@classy/css/components/dialog.css'
+  - core/assets/vendor/jquery.ui/themes/base/dialog.css
+regions:
+  logo: Logo
+  navigation: Navigation
+  page_title: 'Page Title'
+  breadcrumbs: Breadcrumbs
+  slider: Slider
+  features: Features
+  content_top: 'Content Top'
+  left_sidebar: 'Left Sidebar'
+  content: Content
+  right_sidebar: 'Right Sidebar'
+  content_bottom: 'Content Bottom'
+  bottom_first: 'Bottom First'
+  bottom_second: 'Bottom Second'
+  bottom_thrid: 'Bottom Thrid'
+  bottom_fourth: 'Bottom Fourth'
+  copyright: Copyright
+presets:
+  Default:
+    base_color:
+      title: 'Base Color'
+      value: '#303030'
+    text_color:
+      title: 'Text Color'
+      value: '#666666'
+    link_color:
+      title: 'Link Color'
+      value: '#e1571a'
+    link_hover_color:
+      title: 'Link Hover Color'
+      value: '#e1571a'
+    heading_color:
+      title: 'Heading Color'
+      value: '#141414'
+lessc:
+  - assets/lessc/mixin.less
+  - assets/lessc/base.less
+  - assets/lessc/form.less
+  - assets/lessc/forum.less
+  - assets/lessc/rtl.less
+  - assets/lessc/dialog.less
+'project status url': 'https://projects.drupalexp.com/updates'
+project: drupalexp
+datestamp: 1528171843

@@ -1,0 +1,110 @@
+.node--type-team {
+  &.node--view-mode-teaser {
+    .portfolio-layout-bottom {
+      text-align: center;
+      .field--name-body,
+      .field--name-field-social-network {
+        display: none;
+      }
+    }
+    .field--name-body {
+      color: #999;
+    }
+    .field--name-node-title {
+      h3 {
+        margin: 20px 0px 0px;
+        a {
+          color: #353535 !important;
+          text-transform: uppercase;
+          &:hover {
+            color: #353535 !important;
+          }
+        }
+      }
+    }
+    .field--name-field-team-position {
+      margin-bottom: 30px;
+      a {
+        color: #999 !important;
+        &:hover {
+          color: #353535 !important;
+        }
+      }
+    }
+    &.dexp-layout-portfolio-style02 {
+      .image-wrapper {
+        .overlay {
+          background-color: rgba(255, 255, 255, .9);
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &:hover {
+        .overlay {
+          top: unset;
+          opacity: 1;
+        }
+        .portfolio-layout-bottom {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .portfolio-layout-bottom {
+        background: transparent;
+        padding: 20px 10px 10px 10px;
+        .transition(all, 0.3s, ease-in-out);
+        display: block;
+        .field--name-field-team-position {
+          margin-bottom: 0;
+          a {
+            font-weight: 500;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  .field--name-field-social-network {
+    .field__item {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      a {
+        color: #8e8e8e !important;
+        display: block;
+        .transition(all,0.3s);
+        i {
+          .transition(all,0.3s);
+          color: #8e8e8e !important
+        }
+      }
+      &:hover {
+        a {
+          color: #0b0b0b !important;
+        }
+        i {
+          color: #0b0b0b !important;
+        }
+      }
+    }
+  }
+}
+.team-detail{
+  margin-bottom: 100px;
+  @media @tablet{
+    margin-bottom: 60px;
+  }
+  .field--name-field-social-network {
+    margin: 20px 0;
+    .field__item{
+      margin: 0 2px;
+      a{
+        text-align: center;
+        border: 1px solid #111;
+      }
+    }
+  }
+}
