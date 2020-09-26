@@ -2,6 +2,7 @@ base:
   css:
     base:
       assets/fonts/nation.css: {}
+      assets/css/custom.css: {}
   js:
     assets/js/nation.js: {}
   dependencies:

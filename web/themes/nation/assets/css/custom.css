@@ -1,0 +1,7 @@
+ul.dexp-menu li.menu-item--expanded > ul {
+  min-width: 300px;
+}
+
+.region-content {
+  margin-bottom: 40px;
+}
