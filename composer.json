@@ -52,6 +52,7 @@
         "drupal/media_entity": "^1.8",
         "drupal/pathauto": "^1.8",
         "drupal/profile": "^1.1",
+        "drupal/recaptcha": "^3.0",
         "drupal/sharethis": "^2.0@beta",
         "drupal/shortcode": "^1.0@RC",
         "drupal/sitemap": "^1.5",
