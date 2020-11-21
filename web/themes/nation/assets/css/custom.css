@@ -1,4 +1,8 @@
-ul.dexp-menu li.menu-item--expanded > ul {
+.menu--main ul.dexp-menu li a {
+  font-family: 'Oswald','Dosis',sans-serif !important;
+  font-weight: 200 !important;
+}
+.menu--main ul.dexp-menu li.menu-item--expanded > ul {
   min-width: 300px;
 }
 
